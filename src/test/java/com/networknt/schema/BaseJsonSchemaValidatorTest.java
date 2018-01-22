@@ -18,6 +18,7 @@ package com.networknt.schema;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Test;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -33,6 +34,12 @@ public class BaseJsonSchemaValidatorTest {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node = mapper.readTree(is1);
         return node;
+    }
+
+    @Test
+    public void test02() throws Exception {
+//        getJsonNodeFromClasspath("tests/id_schema/schema/features.json");
+        getJsonNodeFromClasspath("dev/data/order_array_test.json");
     }
 
     protected JsonNode getJsonNodeFromStringContent(String content) throws Exception {
@@ -53,6 +60,11 @@ public class BaseJsonSchemaValidatorTest {
                 .getResourceAsStream(name);
         JsonSchema schema = factory.getSchema(is);
         return schema;
+    }
+
+    @Test
+    public void test() throws Exception {
+        getJsonSchemaFromClasspath("tests/id_schema/schema/features.json");
     }
 
 

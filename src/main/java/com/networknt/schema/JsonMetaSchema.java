@@ -86,6 +86,8 @@ public class JsonMetaSchema {
                             new NonValidationKeyword("description"), 
                             new NonValidationKeyword("default"),
                             new NonValidationKeyword("definitions")
+                            // 这里是为了把不需要验证的关键字用NonValidationKeyword包装下
+//                            new NonValidationKeyword("exclusiveMinimum")
                     ))
                     .build();
         }

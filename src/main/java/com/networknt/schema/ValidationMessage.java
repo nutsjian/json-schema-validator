@@ -20,6 +20,9 @@ import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.Map;
 
+/**
+ * format是MessageFormat，通过arguments来format错误消息，并存放在message中
+ */
 public class ValidationMessage {
     private String type;
     private String code;

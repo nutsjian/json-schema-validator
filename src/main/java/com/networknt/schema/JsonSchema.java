@@ -122,8 +122,9 @@ public class JsonSchema extends BaseJsonValidator {
         return validators;
     }
 
+    // 这里会用JsonSchema下的所有validator，进行校验
     public Set<ValidationMessage> validate(JsonNode jsonNode, JsonNode rootNode, String at) {
-        Set<ValidationMessage> errors = new LinkedHashSet<ValidationMessage>();
+        Set<ValidationMessage> errors = new LinkedHashSet<>();
         for (JsonValidator v : validators.values()) {
             errors.addAll(v.validate(jsonNode, rootNode, at));
         }
