@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Order Array",
+  "description": "A order array",
+  "type": "array",
+  "items": {
+    "title": "Order",
+    "type": "object",
+    "properties": {
+      "order_no": {
+        "type": "string"
+      },
+      "amount": {
+        "type": "number"
+      },
+      "consignee": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      }
+    },
+    "required": ["order_no", "amount", "consignee", "phone"]
+  }
+}

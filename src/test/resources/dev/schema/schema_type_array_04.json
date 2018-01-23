@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "number",
+    "typeErrorCode": "参数必须是数字",
+    "minimum": 99,
+    "minimumErrorCode": "必须大于等于99"
+  },
+  "minItems": 1,
+  "minItemsErrorCode": "至少有一个元素",
+  "maxItems": 5,
+  "maxItemsErrorCode": "最多5个元素"
+}

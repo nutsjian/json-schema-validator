@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "number",
+    "typeErrorCode": "参数必须是数字"
+  },
+  "minItems": 3,
+  "maxItems": 6,
+  "uniqueItems": true,
+  "minItemsErrorCode": "至少3个",
+  "maxItemsErrorCode": "最多6个",
+  "uniqueItemsErrorCode": "参数不能重复"
+}

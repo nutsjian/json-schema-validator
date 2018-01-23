@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "string",
+      "typeErrorCode": "第一个元素必须是string型",
+      "minLength": 11,
+      "minLengthErrorCode": "第一个元素长度不能小于11"
+    },
+    {
+      "type": "number",
+      "typeErrorCode": "第二个元素必须是number型",
+      "minimum": 99,
+      "minimumErrorCode": "第二个元素不能小于99"
+    }
+  ],
+  "additionalItems": {
+    "type": "string",
+    "typeErrorCode": "从第三个元素开始必须是string型",
+    "minLength": 5,
+    "minLengthErrorCode": "从第三个元素开始长度必须大于5位"
+  }
+}

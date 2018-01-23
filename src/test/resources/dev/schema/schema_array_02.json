@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "number",
+    "typeErrorCode": "参数必须是数字",
+    "minimum": 99,
+    "minimumErrorCode": "必须大于等于99"
+  }
+}

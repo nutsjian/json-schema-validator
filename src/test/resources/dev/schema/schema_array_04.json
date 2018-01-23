@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "string",
+      "typeErrorCode": "数组第一个元素必须是字符串",
+      "minLength": 6,
+      "minLengthErrorCode": "数组第一个元素长度不能小于6位"
+    },
+    {
+      "type": "number",
+      "typeErrorCode": "数组第二个元素必须是数值",
+      "minimum": 1000,
+      "minimumErrorCode": "数组第二个元素必须大于等于1000"
+    }
+  ],
+  "minItems": 1,
+  "minItemsErrorCode": "至少有一个元素"
+}

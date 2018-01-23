@@ -23,6 +23,7 @@ import org.slf4j.Logger;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.MessageFormat;
 import java.util.Set;
 
 public abstract class BaseJsonValidator implements JsonValidator {
@@ -104,6 +105,10 @@ public abstract class BaseJsonValidator implements JsonValidator {
     // 这个方法是用来处理默认的xxxErrorCode的keyword的
     // 当我们在schema中定义了xxxErrorCode，那么就会在这里处理一下后，使用默认的CustomErrorMessageType转换，最后出现的错误信息在code中获取
     protected void parseErrorCode(String errorCodeKey) {
+        if (errorCodeKey.equalsIgnoreCase("requiredErrorCode")) {
+            errorMessageType = CustomErrorMessageType.of("不能为空", new MessageFormat("{1} 不能为空"));
+            return;
+        }
         JsonNode errorCodeNode = getParentSchema().getSchemaNode().get(errorCodeKey);
         if (errorCodeNode != null && errorCodeNode.isTextual()) {
             String errorCodeText = errorCodeNode.asText();

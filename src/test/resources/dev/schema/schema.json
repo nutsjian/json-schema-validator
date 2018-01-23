@@ -4,7 +4,9 @@
   "type": "object",
   "properties": {
     "username": {
-      "type": "string"
+      "type": "string",
+      "minLength": 11,
+      "minLengthErrorCode": "用户名长度不能小于11位"
     },
     "amount": {
       "type": "number"
